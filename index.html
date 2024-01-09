@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Employee Management App</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.10.22/css/jquery.dataTables.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Jost:wght@300;400&family=Lexend&family=PT+Sans&family=Poppins:wght@200;400;600&family=Roboto&family=Rubik&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="assets/css/bootstrap.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+  <section>
+    <div class="header">
+      <label for="">Employee Management App</label>
+      <button data-toggle="modal" data-target="#inputUser" id="btn-showmodal">Add New User</button>
+    </div>
+    <!-- The Modal -->
+    <div class="modal fade" id="inputUser">
+      <div class="modal-dialog">
+        <div class="modal-content">
+
+          <!-- Modal Header -->
+          <div class="modal-header">
+            <h4 class="modal-title"></h4>
+            <button class="close" id="btn-close" data-dismiss="modal"><i class="fa-solid fa-xmark"></i></button>
+          </div>
+
+          <!-- Modal body -->
+          <div class="modal-body">
+            <form id="employeeForm" class="was-validated">
+              <div class="form">
+                <div class="row">
+                  <div class="col fields">
+                    <label for="">Name</label>
+                    <input type="text" placeholder="Enter name" id="user-name" class="form-control" required>
+                    <div class="invalid-feedback">Please fill out this field.</div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col fields">
+                    <label>Email</label>
+                    <input type="email" placeholder="Enter email" id="email" class="form-control" required>
+                    <div class="invalid-feedback" feedback-pos>Please fill out this field.</div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col fields">
+                    <label>Phone</label>
+                    <input type="text" placeholder="Enter phone" id="phone" class="form-control"
+                      pattern="[1-9]{1}[0-9]{9}" required>
+                    <div class="invalid-feedback">Please fill out this field.</div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col fields">
+                    <label for="">Gender</label>
+                    <div class="gender">
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="gender" id="male" value="male" required>
+                        <label class="form-check-label" for="male">Male</label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="gender" id="female" value="female">
+                        <label class="form-check-label" for="female">Female </label>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col fields">
+                        <label>Position</label>
+                        <select class="form-select" aria-label="Default select example" id="position" required>
+                          <option value="" selected></option>
+                          <option value="Frontend Developer">Frontend Developer</option>
+                          <option value="ReactJS Developer">ReactJS Developer</option>
+                          <option value="PHP Developer">PHP Developer</option>
+                          <option value="Graphic Designer">Graphic Designer</option>
+                          <option value="Backend Developer">Backend Developer</option>
+                          <option value="NodeJS Developer">NodeJS Developer</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+
+          <!-- Modal footer -->
+          <div class="modal-footer"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="display-data">
+    <div class="container">
+      <div class="table-responsive-md">
+        <table class="table table-bordered" id="table">
+          <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Name</th>
+              <th scope="col">Email</th>
+              <th scope="col">Phone</th>
+              <th scope="col">Gender</th>
+              <th scope="col">Position</th>
+              <th scope="col" style="width:8%">Actions</th>
+            </tr>
+          </thead>
+          <tbody id="table-body">
+
+          </tbody>
+        </table>
+
+      </div>
+    </div>
+
+  </section>
+
+
+  <script src="assets/js/jquery-3.7.0.js"></script>
+  <script src="assets/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js"></script>
+  <script src="assets/js/users.js"></script>
+
+
+
+</body>
+
+</html>

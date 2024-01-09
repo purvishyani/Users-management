@@ -1,0 +1,159 @@
+*{
+    margin:0;
+    padding:0
+}
+
+body{
+    font-family: Rubik;
+    box-sizing: border-box;
+    background-color: rgb(237 237 237);
+    font-family: 'Rubik', sans-serif;
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    background-color:rgb(122 144 248);
+    padding: 0.5rem 2rem;
+    color:white;
+    align-items: center;
+    font-weight: bold;
+    box-shadow: -1px 1px 9px 0px #888888;
+}
+button{
+    padding: 0.4rem 1rem;
+    border-radius: 0.3rem;
+    border: none;
+    font-family: default;
+    font-size: 0.7rem;
+    font-weight: bold;
+    background-color: white;
+}
+table.dataTable{
+    border-collapse: collapse;
+
+}
+tr{
+    border-bottom: 1px;
+}
+.table{
+   --bs-table-bg:none;
+   --bs-table-color:none;
+   border-radius: 0.6rem;
+   overflow: hidden;
+   font-size:0.7rem;
+   box-shadow: 0px 0px 8px 0px #888888;
+
+}
+table, th, td {
+    border-left: none;
+    border-right: none;
+  }
+  .table-bordered > :not(caption) > *{
+    border-width:1px
+  }
+thead{
+    background-color: black;
+    color:white;
+}
+.table > :not(caption) > * > * {
+    padding: 0.8rem 0.8rem;
+}
+.display-data{
+    margin-top:3rem;
+}
+tbody{
+    background-color: white; 
+}
+.table > tbody {
+    vertical-align: middle;
+}
+
+.btn-edit-delete{
+    height: 1.7rem;
+    width: 1.7rem;
+    border-radius: 0.3rem;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: orange;
+    margin-right: 0.2rem;
+    padding: 0;
+}
+.col-action{
+    display: flex
+}
+.btn-pink{
+    background-color: #ff6565;
+}
+
+
+/* MODAL */
+.modal{
+    --bs-modal-width: 370px;
+}
+.modal-header{
+    color: white;
+    padding: 0.7rem 1rem;
+}
+.modal-title{
+    font-size: 0.8rem;;
+}
+.modal-body{
+    padding: 0.5rem 1rem;
+}
+.modal-footer{
+    padding-top: 0;
+}
+.close{
+    color: white;
+    background-color: transparent;
+    padding:0
+}
+.form{
+    display: flex;
+    flex-direction: column;
+}
+.fields{
+    display: flex;
+    flex-direction: column;
+    font-size: 0.7rem;
+    margin:0.3rem 0; 
+}
+.fields input{
+    padding: 0.4rem 0.7rem;
+    border-radius: 0.2rem;
+    border: 1px solid #dee2e6;
+}
+.form-control{
+    font-size: 0.7rem;
+}
+.form-check input{
+    padding: 0.3rem;
+    border-radius: 0.2rem;
+    border: 1px solid #dee2e6;
+}
+.gender{
+    display: flex;
+    align-items: center;
+    margin-top: 0.2rem;
+}
+.form-check{
+    margin-right: 1rem;
+}
+.form-select{
+    font-size: 0.8rem;
+}
+.modal-footer{
+    border-top:none;
+    justify-content: flex-start;
+}
+.modal-footer button{
+    background-color: rgb(122 144 248);
+    color:white
+}
+#btn-adduser, #btn-edituser{
+    padding: 0.6rem 1.4rem;
+    font-weight: normal;
+}
